@@ -1,0 +1,13 @@
+.header-main h1{
+    color: rgb(196, 196, 243);
+    font-size: 60px;
+}
+
+.header-main span{
+    color: yellow;
+}
+
+.header-main p{
+    color: rgb(196, 196, 243);
+    font-size: 24px;
+}
