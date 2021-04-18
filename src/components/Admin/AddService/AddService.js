@@ -31,7 +31,7 @@ const AddService = () => {
             price: data.price,
         };
         console.log(serviceData)
-        const url = `http://localhost:5000/addService`;
+        const url = `https://blooming-bayou-15660.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {

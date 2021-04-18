@@ -6,14 +6,14 @@ import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 const ManageServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://blooming-bayou-15660.herokuapp.com/services')
             .then((res) => res.json())
             .then((data) => {
                 setServices(data);
             });
     }, []);
     const handleDeleteService = (id) => {
-        const url = `http://localhost:5000/deleteService/${id}`;
+        const url = `https://blooming-bayou-15660.herokuapp.com/deleteService/${id}`;
         fetch(url, {
             method: 'DELETE',
         })

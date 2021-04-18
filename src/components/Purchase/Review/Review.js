@@ -18,7 +18,7 @@ const Review = () => {
             company: data.company,
             review: data.comment,
         };
-        const url = 'http://localhost:5000/addReview';
+        const url = 'https://blooming-bayou-15660.herokuapp.com/addReview';
         fetch(url, {
             method: 'POST',
             headers: {

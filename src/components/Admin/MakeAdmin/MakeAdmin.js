@@ -10,7 +10,7 @@ const MakeAdmin = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/makeAdmin', {
+        fetch('https://blooming-bayou-15660.herokuapp.com/makeAdmin', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://blooming-bayou-15660.herokuapp.com/services')
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
@@ -31,6 +33,7 @@ const Services = () => {
                                     <img src={service.imageURL} className='card-img-top book-cover' alt='...' />
                                 </figure>
                                 <div className='card-body'>
+                                <FontAwesomeIcon className="icon-control" icon={ faHandsHelping } />
                                     <h4 className='card-title fw-bold text-danger'>
                                         {service.title}
                                     </h4>

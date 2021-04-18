@@ -8,7 +8,7 @@ const OrderList = () => {
     const [purchasedService, setPurchasedService] = useState([]);
     useEffect(() => {
         fetch(
-            'http://localhost:5000/adminPurchasedServices'
+            'https://blooming-bayou-15660.herokuapp.com/adminPurchasedServices'
         )
             .then((res) => res.json())
             .then((data) => {
@@ -17,12 +17,12 @@ const OrderList = () => {
     }, []);
 
     const changeStatus = ({ target: { value: statusValue } }, id) => {
-        fetch(`http://localhost:5000/getOrder/${id}`)
+        fetch(`https://blooming-bayou-15660.herokuapp.com/getOrder/${id}`)
             .then((response) => response.json())
             .then((result) => {
                 if (result) {
                     fetch(
-                        'http://localhost:5000/updateOrderStatus',
+                        'https://blooming-bayou-15660.herokuapp.com/updateOrderStatus',
                         {
                             method: 'PATCH',
                             body: JSON.stringify({

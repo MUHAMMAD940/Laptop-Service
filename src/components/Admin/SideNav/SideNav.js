@@ -20,7 +20,7 @@ const SideNav = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/checkUserRole?email=' + loggedInUser.email)
+        fetch('https://blooming-bayou-15660.herokuapp.com/checkUserRole?email=' + loggedInUser.email)
             .then((res) => res.json())
             .then((data) => {
                 setIsAdmin(data);

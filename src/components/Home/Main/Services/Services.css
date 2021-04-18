@@ -47,3 +47,14 @@ figure img {
     transition: 0.5s;
     background-color: #2ecc71 !important;
 }
+
+.icon-control{
+    font-size: 50px;
+    color: rgb(255, 145, 0);
+    margin-bottom: 15px;
+    transition: all linear .4s;
+}
+
+.card:hover .icon-control{
+    transform: rotate(180deg);
+}

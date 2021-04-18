@@ -17,7 +17,7 @@ const Purchase = () => {
     } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://blooming-bayou-15660.herokuapp.com/services')
             .then((res) => res.json())
             .then((data) => {
                 const info = data.filter((service) => _id == service._id);
@@ -38,7 +38,7 @@ const Purchase = () => {
             status: 'Pending'
         };
         const url =
-            'http://localhost:5000/purchaseService';
+            'https://blooming-bayou-15660.herokuapp.com/purchaseService';
         fetch(url, {
             method: 'POST',
             headers: {

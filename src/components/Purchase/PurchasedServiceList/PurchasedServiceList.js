@@ -6,7 +6,7 @@ const PurchasedServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [purchasedService, setPurchasedService] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/purchasedServices?email=' + loggedInUser.email)
+        fetch('https://blooming-bayou-15660.herokuapp.com/purchasedServices?email=' + loggedInUser.email)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
